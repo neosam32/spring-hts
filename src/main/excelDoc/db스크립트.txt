@@ -1,0 +1,17 @@
+CREATE TABLE user (
+  mb_id varchar(10) DEFAULT NULL COMMENT '회원id',
+  mb_nm varchar(100) DEFAULT NULL COMMENT '회원명',
+  username varchar(100) DEFAULT NULL COMMENT '스프링 시큐리트에서 사용 하기 때문에 로 입력 이메일 컬럼으로 사용 함',
+  password varchar(200) DEFAULT NULL COMMENT 'password',
+  role varchar(20) DEFAULT NULL COMMENT '사용자권한',
+  tlno1 varchar(4) DEFAULT NULL COMMENT '전화번호1',
+  tlno2 varchar(100) DEFAULT NULL COMMENT '전화번호2',
+  tlno3 varchar(100) DEFAULT NULL COMMENT '전화번호3',
+  br_id varchar(10) DEFAULT NULL COMMENT '지점ID',
+  del_yn varchar(1) DEFAULT NULL COMMENT '삭제여부',
+  mdf_dthms datetime DEFAULT NULL COMMENT '수정일시',
+  inp_dthms datetime DEFAULT NULL COMMENT '입력일시',
+  mdf_id varchar(10) DEFAULT NULL COMMENT '수정자id',
+  UNIQUE KEY user_username_IDX (username) USING BTREE,
+  UNIQUE KEY user_mb_id_IDX (mb_id) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='사용자'

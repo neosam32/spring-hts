@@ -1,0 +1,40 @@
+server:
+  port: 8000
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+    
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+      
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hts?serverTimezone=Asia/Seoul&useSSL=false&allowPublicKeyRetrieval=true
+    username: htsDev
+    password: htsDev1234!
+   
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+      
+mybatis:
+  configuration:
+      multiple-result-sets-enabled: false    
+      map-underscore-to-camel-case: true    
+      call-setters-on-nulls: true        
+      jdbc-type-for-null: varchar    
+      default-fetch-size: 500  
+      
+logging:
+  level: 
+    root: info
+    '[com.hts]': DEBUG 
+    
+    
+      
