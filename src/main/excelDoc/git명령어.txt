@@ -16,4 +16,29 @@ git remote add origin https://github.com/neosam32/spring-hts.git
 git branch -M main
 git push -u origin main
 
+구글 클라이언트 아이디 
+268784453261-0hq5v9oda6d10utvnn6p64o4oc08f7q9.apps.googleusercontent.com
 
+구글 클라이언트 비밀번호
+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
+
+
+echo "# deploy" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/neosam32/deploy.git
+git push -u origin main
+
+git remote add https://github.com/neosam32/security.git
+$ git push -u origin main
+
+
+echo "# jwt" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/neosam32/jwt.git
+git push -u origin main
